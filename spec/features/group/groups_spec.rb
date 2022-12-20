@@ -15,18 +15,27 @@ RSpec.describe 'Group pages integration examples', type: :feature do
   
   describe 'Group#index page functionality' do
     it 'Groups page is presented after logged in' do
-      expect(page).to have_content("GROUPS")
+      expect(page).to have_content("Add a new group")
     end
 
-    it 'presents each group/categorie name and icon' do
+    it 'presents each group/categorie name' do
       # creates Groups
-    (0..5).each do |indx|
-      Group.create(name: "group #{indx}", user:)
-    end
+      (0..5).each do |indx|
+        Group.create(name: "group #{indx}", user:)
+      end
+      visit group_index_path
       Group.all.each do |group|
         expect(page).to have_content(group.name)
-        expect(page).to have_content(group.icon)
       end
+    end
+
+    it 'presents each group/categorie icon' do
+      # creates Groups
+      (0..5).each do |indx|
+        Group.create(name: "group #{indx}", user:)
+      end
+      visit group_index_path
+      expect(page).to have_css('img', count: Group.all.count)
     end
 
     it 'redirect to group#new form when add a new group button is clicked' do

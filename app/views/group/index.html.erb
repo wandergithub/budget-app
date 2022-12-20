@@ -1,4 +1,10 @@
 <div>
-  GROUPS nav-bar
+  <% @groups.each do |group| %>
+    <h1>
+      <%= group.name %>
+    </h1>
+    <img src="<%= group.icon %>">
+    <span>Expenses: $0</span>
+  <% end %>
+  <%= link_to "Add a new group", new_group_path , class: 'main-btn' %>
 </div>
-<%= link_to "Add a new group", new_group_path , class: 'main-btn' %>
