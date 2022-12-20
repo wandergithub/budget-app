@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+/* splash screen */
+.content-centered {
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-btn {
+  background-color: #3778c2;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 80%;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: lighter;
+}
+
+.secondary-btn {
+  background-color: white;
+  border: none;
+  color: gray;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 80%;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: lighter;
+}
