@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe User, :type => :model do
+RSpec.describe User, type: :model do
   context 'User model specs' do
     it 'is valid with valid attributes' do
-      user = User.new(name: "name 1")
+      user = User.new(name: 'name 1')
       expect(user).to be_valid
     end
 

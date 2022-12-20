@@ -5,7 +5,7 @@ RSpec.describe Group, type: :model do
 
   context 'Group model examples' do
     it 'requires a name to be valid' do
-      expect(Group.new( user:)).to_not be_valid
+      expect(Group.new(user:)).to_not be_valid
     end
 
     it 'belongs to a user to be valid' do
