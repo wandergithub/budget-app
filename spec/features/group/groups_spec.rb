@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Group pages integration examples', type: :feature do
-  let(:user) { User.new(name: "example 1", password: "pasword11212", email: "email@exmaple.com") }
+  let(:user) { User.create(name: "example 1", password: "pasword11212", email: "email@exmaple.com") }
   # Log in
   before(:each) do
     visit new_user_session_path
@@ -12,7 +12,7 @@ RSpec.describe 'Group pages integration examples', type: :feature do
   
   describe 'Group#index page functionality' do
     it 'Groups page is presented after logged in' do
-      expect(page).to have_current_path(groups_path)
+      expect(page).to have_content("GROUPS")
     end
   end
 end
