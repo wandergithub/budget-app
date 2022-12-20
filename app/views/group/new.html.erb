@@ -1,0 +1,5 @@
+<%= form_with model: @group, url: "/group", method: :post, scope: :group do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_field :icon %>
+  <%= form.submit "Save" %>
+<% end %>
