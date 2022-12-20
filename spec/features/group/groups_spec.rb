@@ -20,4 +20,20 @@ RSpec.describe 'Group pages integration examples', type: :feature do
       expect(page).to have_current_path(new_group_path)
     end
   end
+
+  describe 'Group#new page form functionality' do
+    it 'shows the new group form input fild' do
+      expect(page).to have_field("#group_name")
+    end
+
+    it 'creates a new group' do
+      expect(Group.first).not_to exist
+      
+      fill_in "group_name", with: "sample name"
+      fill_in "icon", with: "icon_link.png"
+      click_on "Save"
+
+      expect(Group.first).to exist
+    end
+  end
 end
