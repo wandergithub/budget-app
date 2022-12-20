@@ -14,5 +14,10 @@ RSpec.describe 'Group pages integration examples', type: :feature do
     it 'Groups page is presented after logged in' do
       expect(page).to have_content("GROUPS")
     end
+
+    it 'redirect to group#new form when add a new group button is clicked' do
+      click_on 'Add a new group'
+      expect(page).to have_current_path(new_group_path)
+    end
   end
 end
