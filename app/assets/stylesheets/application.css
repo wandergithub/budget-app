@@ -18,6 +18,8 @@
 /* splash screen */
 body {
   margin: 0%;
+  display: flex;
+  flex-direction: column;
 }
 .content-centered {
   margin-top: 15vh;
@@ -78,3 +80,25 @@ body {
   padding: 0%;
 }
 
+.l {
+  visibility: hidden;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field > input {
+  width: 85%;
+  height: 36px;
+}
+
+.self-center {
+  text-decoration: none;
+  color: gray;
+  align-self: center;
+  margin-top: 20px;
+}
