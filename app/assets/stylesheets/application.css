@@ -20,6 +20,7 @@ body {
   margin: 0%;
   display: flex;
   flex-direction: column;
+  background: #f1f3f2;
 }
 .content-centered {
   margin-top: 15vh;
@@ -27,35 +28,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-}
-
-.main-btn {
-  background-color: #3778c2;
-  border: none;
-  color: white;
-  border-radius: 2px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 80%;
-  font-family: "Proxima Nova", sans-serif;
-  font-weight: lighter;
-}
-
-.secondary-btn {
-  background-color: #ffffff;
-  border: none;
-  color: gray;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 80%;
-  font-family: "Proxima Nova", sans-serif;
-  font-weight: lighter;
 }
 
 .icon {
@@ -101,4 +73,60 @@ body {
   color: gray;
   align-self: center;
   margin-top: 20px;
+}
+
+.group-container {
+  display: flex;
+  padding: 0px 8px;
+  align-items: center;
+  text-decoration: none;
+  background: white;
+  margin: 7px 9px;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.group-container > img {
+  width: 15%;
+}
+
+.group-container > p {
+  margin-right: auto;
+  color: darkgrey;
+  margin-left: 3%;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.group-container > span {
+  color: black;
+  font-weight: 600;
+}
+
+.main-btn {
+  background-color: #3778c2;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 80%;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: lighter;
+}
+
+.secondary-btn {
+  background-color: #ffffff;
+  border: none;
+  color: gray;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 80%;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: lighter;
 }

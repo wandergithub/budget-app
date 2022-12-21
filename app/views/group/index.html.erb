@@ -1,10 +1,10 @@
-<div class="group-container">
+<%= render partial: "shared/nav_bar", locals: {title: "Groups", title_amount: nil, back_button_path: group_index_path, right_btn: nil} %>
   <% @groups.each do |group| %>
-    <%= link_to group_expense_index_path(group.id) do %>
-      <h1>
-        <%= group.name %>
-      </h1>
+    <%= link_to group_expense_index_path(group.id), class: "group-container" do %>
       <img src="<%= group.icon %>">
+      <p>
+        <%= group.name %>
+      </p>
       <span>Expenses: $
       <% total = 0 %>
       <% group.expenses.each do |expense| %>
@@ -14,5 +14,4 @@
       </span>
     <% end %>
   <% end %>
-  <%= link_to "Add a new group", new_group_path , class: 'main-btn' %>
-</div>
+  <%= link_to "Add a new group", new_group_path , class: 'main-btn self-center' %>
