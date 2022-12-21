@@ -1,6 +1,11 @@
 class ExpenseController < ApplicationController
+  before_action :authenticate_user!
   def index
     @expenses = Group.find(params[:group_id]).expenses.order(created_at: :desc)
+    @total = 0
+    @expenses.each do |expense|
+      @total += expense.amount
+    end
   end
 
   def new
