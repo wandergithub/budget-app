@@ -2,6 +2,6 @@
 
 <%= form_with model: @expense, url: "/group/#{params[:group_id]}/expense", method: :post, scope: :expense do |form| %>
   <%= form.text_field :name %>
-  <%= form.text_field :amount %>
+  <%= form.number_field :amount %>
   <%= form.submit "Save" %>
 <% end %>
