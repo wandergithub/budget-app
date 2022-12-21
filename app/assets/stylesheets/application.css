@@ -176,3 +176,8 @@ body {
 .expense-a {
   color: black;
 }
+
+.field > select {
+  width: 85%;
+  height: 36px;
+}
