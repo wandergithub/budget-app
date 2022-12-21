@@ -46,7 +46,6 @@ body {
   font-weight: lighter;
 }
 
-
 .l {
   visibility: hidden;
 }
@@ -144,4 +143,36 @@ body {
   width: auto;
   cursor: pointer;
   padding: 0%;
+}
+
+.groups-c {
+  background: #f1f3f2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-s {
+  gap: 28px;
+  padding-top: 21px;
+}
+
+.expense-c {
+  display: flex;
+  padding: 0px 8px;
+  align-items: center;
+  text-decoration: none;
+  background: white;
+  margin: 7px 9px;
+  font-family: "Proxima Nova", sans-serif;
+  gap: 8px;
+}
+.expense-t {
+  font-size: larger;
+  color: gray;
+  margin: 0px 9%;
+}
+
+.expense-a {
+  color: black;
 }

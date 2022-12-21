@@ -1,6 +1,10 @@
 <%= render partial: "shared/nav_bar", locals: {title: "Create new group", title_amount: nil, back_button_path: group_index_path} %>
-<%= form_with model: @group, url: "/group", method: :post, scope: :group do |form| %>
-  <%= form.text_field :name %>
-  <%= form.text_field :icon %>
-  <%= form.submit "Save", class: 'new-btn' %>
+<%= form_with class: "groups-c form-s", model: @group, url: "/group", method: :post, scope: :group do |form| %>
+  <div class="field">
+    <%= form.text_field :name, autocomplete: "name", placeholder: "Group name" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :icon, autocomplete: "icon", placeholder: "Icon img link" %>
+  </div>
+  <%= form.submit "Save", class: 'new-btn', style: 'align-self: center;' %>
 <% end %>
