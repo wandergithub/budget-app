@@ -2,9 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Group pages integration examples', type: :feature do
   # New user
-  let(:user) { User.create(name: "example 1", password: "pasword11212", email: "email@exmaple.com") }
-  
-  
+  let(:user) { User.create(name: 'example 1', password: 'pasword11212', email: 'email@exmaple.com') }
+
   before(:each) do
     # Log in
     visit new_user_session_path
@@ -12,10 +11,10 @@ RSpec.describe 'Group pages integration examples', type: :feature do
     fill_in 'user_password', with: user.password
     click_on 'Log in'
   end
-  
+
   describe 'Group#index page functionality' do
     it 'Groups page is presented after logged in' do
-      expect(page).to have_content("Add a new group")
+      expect(page).to have_content('Add a new group')
     end
 
     it 'presents each group/categorie name' do
@@ -49,15 +48,15 @@ RSpec.describe 'Group pages integration examples', type: :feature do
       visit new_group_path
     end
     it 'shows the new group form input fild' do
-      expect(page).to have_field("group_name")
+      expect(page).to have_field('group_name')
     end
 
     it 'creates a new group' do
       expect(Group.first).to be_nil
 
-      fill_in "group_name", with: "sample name"
-      fill_in "group_icon", with: "icon_link.png"
-      click_on "Save"
+      fill_in 'group_name', with: 'sample name'
+      fill_in 'group_icon', with: 'icon_link.png'
+      click_on 'Save'
 
       expect(Group.first).to be_an_instance_of(Group)
     end

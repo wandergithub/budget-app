@@ -20,8 +20,10 @@ body {
   margin: 0%;
   display: flex;
   flex-direction: column;
+
   /* background: #f1f3f2; */
 }
+
 .content-centered {
   margin-top: 15vh;
   display: flex;
@@ -38,7 +40,7 @@ body {
 .nav-bar {
   background-color: #3778c2;
   display: flex;
-  padding: 0px 10px;
+  padding: 0 10px;
   align-items: center;
   justify-content: space-between;
   color: white;
@@ -71,7 +73,7 @@ body {
 
 .group-container {
   display: flex;
-  padding: 0px 8px;
+  padding: 0 8px;
   align-items: center;
   text-decoration: none;
   background: white;
@@ -112,7 +114,7 @@ body {
 }
 
 .secondary-btn {
-  background-color: #ffffff;
+  background-color: #fff;
   border: none;
   color: gray;
   padding: 15px 32px;
@@ -159,7 +161,7 @@ body {
 
 .expense-c {
   display: flex;
-  padding: 0px 8px;
+  padding: 0 8px;
   align-items: center;
   text-decoration: none;
   background: white;
@@ -167,10 +169,11 @@ body {
   font-family: "Proxima Nova", sans-serif;
   gap: 8px;
 }
+
 .expense-t {
   font-size: larger;
   color: gray;
-  margin: 0px 9%;
+  margin: 0 9%;
 }
 
 .expense-a {

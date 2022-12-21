@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Expense functionality integration tests', type: :feature do
-  
-   # New user
-  let(:user) { User.create(name: "example 1", password: "pasword11212", email: "email@exmaple.com") }
+  # New user
+  let(:user) { User.create(name: 'example 1', password: 'pasword11212', email: 'email@exmaple.com') }
   before(:each) do
     # Log in
     visit new_user_session_path
@@ -13,12 +12,12 @@ RSpec.describe 'Expense functionality integration tests', type: :feature do
   end
   describe 'Expense/transaction page' do
     before(:each) do
-      @group = Group.create(name: "group example", user:)
-      @expense = Expense.create(name: "expense example", amount: 9, user:)
+      @group = Group.create(name: 'group example', user:)
+      @expense = Expense.create(name: 'expense example', amount: 9, user:)
       @group.expenses << @expense
       visit group_expense_index_path(@group.id)
     end
-   
+
     it 'can visit expense page' do
       expect(page).to have_current_path(group_expense_index_path(@group.id))
     end
@@ -42,15 +41,14 @@ RSpec.describe 'Expense functionality integration tests', type: :feature do
       end
 
       it 'Creates a new expense' do
-        expect(Expense.where(name: "testing")).to_not exist
-        
-        fill_in 'expense_name', with: "testing"
-        fill_in 'expense_amount', with: "3"
-        
+        expect(Expense.where(name: 'testing')).to_not exist
+
+        fill_in 'expense_name', with: 'testing'
+        fill_in 'expense_amount', with: '3'
+
         click_on 'Save'
-        expect(Expense.where(name: "testing")).to exist
+        expect(Expense.where(name: 'testing')).to exist
       end
     end
   end
-
 end

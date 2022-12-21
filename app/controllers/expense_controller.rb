@@ -11,21 +11,19 @@ class ExpenseController < ApplicationController
   def new
     @expense = Expense.new
     @current_group = Group.find(params[:group_id])
-    @groups = Group.all.where(user: current_user).map do |group|
-      group.name
-    end
+    @groups = Group.all.where(user: current_user).map(&:name)
   end
-  
+
   def create
     group = Group.where(name: params[:expense][:group])
     expense = Expense.new(expense_params)
     expense.user = current_user
-    flash[:message] = if expense.save then
-      group.first.expenses << expense
-      "Expense created sucessfully"
-    else
-      "Expense could not be created"
-    end
+    flash[:message] = if expense.save
+                        group.first.expenses << expense
+                        'Expense created sucessfully'
+                      else
+                        'Expense could not be created'
+                      end
     redirect_to group_expense_index_path(group.first.id)
   end
 
