@@ -1,6 +1,6 @@
 <div class="group-container">
   <% @groups.each do |group| %>
-    <%= link_to  do %>
+    <%= link_to group_expense_index_path(group.id) do %>
       <h1>
         <%= group.name %>
       </h1>

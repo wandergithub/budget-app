@@ -1,0 +1,6 @@
+<% @expenses.each do |expense| %>
+  <%= expense.name %>
+  <%= expense.amount %>
+<% end %>
+
+<%= link_to "Add new expense", new_group_expense_path(params[:group_id]) %>
