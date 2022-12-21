@@ -8,7 +8,8 @@
     <% end %>
     <p><%= title %> <%= title_amount %></p>
     <% begin %>
-    <p><%= if right_btn.nil? then nil else right_btn end %></p>
+    <%= if right_btn.nil? then nil else right_btn end %>
     <% rescue %>
+    <p></p>
     <% end %>
 </div>
