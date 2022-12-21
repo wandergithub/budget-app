@@ -1,10 +1,12 @@
-<div>
+<div class="group-container">
   <% @groups.each do |group| %>
-    <h1>
-      <%= group.name %>
-    </h1>
-    <img src="<%= group.icon %>">
-    <span>Expenses: $0</span>
+    <%= link_to  do %>
+      <h1>
+        <%= group.name %>
+      </h1>
+      <img src="<%= group.icon %>">
+      <span>Expenses: $0</span>
+    <% end %>
   <% end %>
   <%= link_to "Add a new group", new_group_path , class: 'main-btn' %>
 </div>
