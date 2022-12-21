@@ -1,4 +1,4 @@
-<%= render partial: "shared/nav_bar", locals: {title: "Total expenses:", title_amount: @total} %>
+<%= render partial: "shared/nav_bar", locals: {title: "Total expenses:", title_amount: @total, back_button_path: group_index_path} %>
 <% @expenses.each do |expense| %>
   <%= expense.name %>
   <%= expense.amount %>

@@ -1,5 +1,4 @@
-<%= flash[:message] %>
-
+<%= render partial: "shared/nav_bar", locals: {title: "New transaction", title_amount: nil, back_button_path: group_expense_index_path(params[:group_id])} %>
 <%= form_with model: @expense, url: "/group/#{params[:group_id]}/expense", method: :post, scope: :expense do |form| %>
   <%= form.text_field :name %>
   <%= form.number_field :amount %>
