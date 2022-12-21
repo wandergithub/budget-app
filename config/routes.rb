@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'group#index'
 
   resources :group, only: [:index, :new, :create] do
-    resources :expense, only: [:index]
+    resources :expense, only: [:index, :new, :create]
   end
   resources :home, only: [:index]
   # Defines the root path route ("/")
