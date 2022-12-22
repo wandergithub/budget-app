@@ -1,0 +1,19 @@
+<div class="groups-c">
+  <%= render partial: "shared/nav_bar", locals: {title: "Groups", title_amount: nil, back_button_path: group_index_path, right_btn: button_to("logout", destroy_user_session_path, method: :delete, class: "main-btn with-a")} %>
+  <% @groups.each do |group| %>
+    <%= link_to group_expense_index_path(group.id), class: "group-container" do %>
+      <img src="<%= group.icon %>">
+      <p>
+        <%= group.name %>
+      </p>
+      <span>Expenses: $
+        <% total = 0 %>
+        <% group.expenses.each do |expense| %>
+          <% total += expense.amount %>
+        <% end %>
+        <%= total %>
+      </span>
+    <% end %>
+  <% end %>
+  <%= link_to "Add a new group", new_group_path , class: 'new-btn self-center' %>
+</div>
