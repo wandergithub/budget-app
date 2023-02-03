@@ -59,7 +59,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Budget App <a name="about-project"></a>
 
-> A mobile/web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+> Budget App: A mobile/web application where you can manage your budget. Users have a list of transactions associated with a category so that they can see how much money they spent on each item.
 
 <img src="app_screenshot.png">
 <img src="app_screenshot2.png">
