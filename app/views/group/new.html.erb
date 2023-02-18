@@ -4,7 +4,7 @@
     <%= form.text_field :name, autocomplete: "name", placeholder: "Group name" %>
   </div>
   <div class="field">
-    <%= form.text_field :icon, autocomplete: "icon", placeholder: "Icon img link" %>
+    <%= form.file_field :image %>
   </div>
   <%= form.submit "Save", class: 'new-btn', style: 'align-self: center;' %>
 <% end %>
