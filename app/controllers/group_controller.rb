@@ -1,7 +1,7 @@
 class GroupController < ApplicationController
   before_action :authenticate_user!
   def index
-    @groups = Group.includes([:expenses]).where(user: current_user)
+    @groups = Group.includes([:expenses, { image_attachment: [:blob] }]).where(user: current_user)
   end
 
   def new
