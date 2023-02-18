@@ -15,7 +15,7 @@
       <% if group.image.attached? %>
         <%= image_tag group.image.variant(resize_to_fill: [150, nil]) %>
       <% else %>
-        <p>No image available</p>
+        <%= image_tag "expense.svg", alt: 'group of expenses' %>
       <% end %>
       <p>
         <%= group.name %>
