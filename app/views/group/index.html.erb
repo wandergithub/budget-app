@@ -3,7 +3,7 @@
   <div class="inc-exp-container">
         <div>
           <h4>Income</h4>
-          <p id="money-plus" class="money plus">+$0.00</p>
+          <p id="money-plus" class="money plus">+$<%= @overall_expenses %></p>
         </div>
         <div>
           <h4>Expenses</h4>
@@ -21,11 +21,7 @@
         <%= group.name %>
       </p>
       <span>Expenses: $
-        <% total = 0 %>
-        <% group.expenses.each do |expense| %>
-          <% total += expense.amount %>
-        <% end %>
-        <%= total %>
+        <%= group.total_expenses %>
       </span>
     <% end %>
   <% end %>
