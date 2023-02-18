@@ -8,4 +8,8 @@ class Group < ApplicationRecord
   has_many :expenses, through: :group_expenses
 
   validates :name, presence: true
+
+  def total_expenses
+    expenses.sum(:amount)
+  end
 end
