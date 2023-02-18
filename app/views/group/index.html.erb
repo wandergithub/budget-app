@@ -2,7 +2,11 @@
   <%= render partial: "shared/nav_bar", locals: {title: "Groups", title_amount: nil, back_button_path: group_index_path, right_btn: button_to("logout", destroy_user_session_path, method: :delete, class: "main-btn with-a")} %>
   <% @groups.each do |group| %>
     <%= link_to group_expense_index_path(group.id), class: "group-container" do %>
-      <img src="<%= group.icon %>">
+      <% if group.image.attached? %>
+        <%= image_tag group.image.variant(resize_to_fill: [150, nil]) %>
+      <% else %>
+        <p>No image available</p>
+      <% end %>
       <p>
         <%= group.name %>
       </p>
