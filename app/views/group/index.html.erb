@@ -1,5 +1,15 @@
 <div class="groups-c">
   <%= render partial: "shared/nav_bar", locals: {title: "Groups", title_amount: nil, back_button_path: group_index_path, right_btn: button_to("logout", destroy_user_session_path, method: :delete, class: "main-btn with-a")} %>
+  <div class="inc-exp-container">
+        <div>
+          <h4>Income</h4>
+          <p id="money-plus" class="money plus">+$0.00</p>
+        </div>
+        <div>
+          <h4>Expenses</h4>
+          <p id="money-minus" class="money minus">-$0.00</p>
+        </div>
+  </div>
   <% @groups.each do |group| %>
     <%= link_to group_expense_index_path(group.id), class: "group-container" do %>
       <% if group.image.attached? %>
