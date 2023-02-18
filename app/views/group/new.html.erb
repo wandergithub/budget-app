@@ -4,6 +4,7 @@
     <%= form.text_field :name, autocomplete: "name", placeholder: "Group name" %>
   </div>
   <div class="field">
+    <p>Upload your group photo or skip to use default:</p>
     <%= form.file_field :image %>
   </div>
   <%= form.submit "Save", class: 'new-btn', style: 'align-self: center;' %>
