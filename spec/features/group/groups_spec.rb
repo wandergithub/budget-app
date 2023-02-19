@@ -55,7 +55,6 @@ RSpec.describe 'Group pages integration examples', type: :feature do
       expect(Group.first).to be_nil
 
       fill_in 'group_name', with: 'sample name'
-      fill_in 'group_icon', with: 'icon_link.png'
       click_on 'Save'
 
       expect(Group.first).to be_an_instance_of(Group)
