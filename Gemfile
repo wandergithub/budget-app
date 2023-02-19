@@ -58,6 +58,8 @@ group :development, :test do
   gem 'erb-formatter'
   # Testing/Specs gem
   gem 'rspec-rails'
+  gem 'simplecov', require: false
+
 end
 
 group :development do
