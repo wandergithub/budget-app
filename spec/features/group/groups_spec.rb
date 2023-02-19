@@ -32,7 +32,7 @@ RSpec.describe 'Group pages integration examples', type: :feature do
       visit group_index_path
       expect(page).to have_css('img', count: Group.all.count)
     end
-    
+
     it 'Presents total expenses number' do
       total_expenses = 0
       Group.all.each do |group|
