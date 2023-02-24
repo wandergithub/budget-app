@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   end
   resources :home, only: [:index]
   
- 
+  post '/set_income', to: 'group#set_income'
+
 end
