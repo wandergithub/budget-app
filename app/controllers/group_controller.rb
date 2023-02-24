@@ -2,7 +2,7 @@ class GroupController < ApplicationController
   before_action :authenticate_user!
   def index
     # User Income
-    @income = current_user.income
+    @income = current_user.income ? current_user.income : '0.00'
 
     # Groups
     @groups = Group.includes([image_attachment: [:blob]]).where(user: current_user)
