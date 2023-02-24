@@ -1,7 +1,13 @@
 class GroupController < ApplicationController
   before_action :authenticate_user!
   def index
+    # User Income
+    @income = current_user.income
+
+    # Groups
     @groups = Group.includes([image_attachment: [:blob]]).where(user: current_user)
+
+    # Overall Expenses
     @overall_expenses = 0
     @groups.each do |group|
       @overall_expenses += group.total_expenses
