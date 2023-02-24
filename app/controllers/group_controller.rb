@@ -31,7 +31,15 @@ class GroupController < ApplicationController
     end
   end
 
+  def set_income
+    current_user.update(income: income_param)
+  end
+
   private
+
+  def income_param
+    params.require(:income)
+  end
 
   def group_params
     params.require(:group).permit(:name, :image)
