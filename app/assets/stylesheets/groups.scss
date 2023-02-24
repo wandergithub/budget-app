@@ -1,49 +1,58 @@
 @import "variables";
 
 :root {
-    --main-color: #13168d;
-    --secondary-color: #393a57;
-    --ternary-color: #486ba6;
-    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    --background-color: #e5e6ed;
-    --background-secondary-color: #fff;
-    --border-color: #80717f;
-    --border-secondary-color: #bcc0cb;
-    --plus-color: #2ecc71;
-    --minus-color: #c0392b;
-  }
+  --main-color: #13168d;
+  --secondary-color: #393a57;
+  --ternary-color: #486ba6;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --background-color: #e5e6ed;
+  --background-secondary-color: #fff;
+  --border-color: #80717f;
+  --border-secondary-color: #bcc0cb;
+  --plus-color: #2ecc71;
+  --minus-color: #c0392b;
+}
 
 .inc-exp-container {
-    background-color: var(--background-secondary-color);
-    box-shadow: var(--box-shadow);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-    border-radius: 5px;
-    font-family: $font-main;
-  }
-  
-  .inc-exp-container > div {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .inc-exp-container > div:first-of-type {
-    border-right: 1px solid var(--border-secondary-color);
-  }
-  
-  .money {
-    font-size: 20px;
-    letter-spacing: 1px;
-    margin: 5px 0;
-  }
-  
-  .money.plus {
-    color: var(--plus-color);
-  }
-  
-  .money.minus {
-    color: var(--minus-color);
-  }
-  
+  background-color: var(--background-secondary-color);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  border-radius: 5px;
+  font-family: $font-main;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid var(--border-secondary-color);
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: var(--plus-color);
+}
+
+.money.minus {
+  color: var(--minus-color);
+}
+
+.groups-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.float-left {
+  float: left;
+  position: absolute;
+}
