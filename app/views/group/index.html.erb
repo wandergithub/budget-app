@@ -42,14 +42,15 @@
     const form = document.getElementById("income-form");
     const input = document.getElementById("income");
 
-    input.addEventListener('change', (e) => {
+    // Income stats change on submition
+    form.addEventListener('submit', () => {
       if(input.value) document.getElementById("money-plus").innerHTML = "+$" + input.value;
     });
 
-    form.style.display = 'none';
     // Edit icon behavior
+      // Display/hides input field
+    form.style.display = 'none';
     editButton.addEventListener('click', () => {
-      // Display/hide input field
       if (form.style.display == 'none') {
         form.style.display = 'flex';
         form.style.justifyContent = 'center';
