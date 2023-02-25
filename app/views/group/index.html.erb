@@ -43,7 +43,7 @@
     const input = document.getElementById("income");
 
     input.addEventListener('change', (e) => {
-      if(e.currentTarget.value) document.getElementById("money-plus").innerHTML = "+$" + e.currentTarget.value;
+      if(input.value) document.getElementById("money-plus").innerHTML = "+$" + input.value;
     });
 
     form.style.display = 'none';
