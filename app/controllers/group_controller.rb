@@ -31,6 +31,12 @@ class GroupController < ApplicationController
     end
   end
 
+  def destroy
+    group = Group.find(params[:id])
+    group.destroy
+    redirect_to '/group'
+  end
+
   def set_income
     current_user.update(income: income_param)
   end
