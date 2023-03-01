@@ -39,6 +39,11 @@ class ExpenseController < ApplicationController
     redirect_to group_expense_index_path(params[:group_id])
   end
 
+  def edit
+    @current_group = Group.find(params[:group_id])
+    @groups = Group.all.where(user: current_user).map(&:name)
+  end
+
   private
 
   def expense_params
