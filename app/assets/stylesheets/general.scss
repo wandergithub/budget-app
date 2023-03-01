@@ -65,6 +65,7 @@ body {
   margin: 5px 20px;
   border-radius: 5px;
   font-family: "Proxima Nova", sans-serif;
+  justify-content: space-between;
 }
 
 .group-container > img {
@@ -72,7 +73,6 @@ body {
 }
 
 .group-container > p {
-  margin-right: auto;
   color: darkgrey;
   margin-left: 3%;
   font-size: 20px;
@@ -152,9 +152,11 @@ body {
   align-items: center;
   text-decoration: none;
   background: white;
-  margin: 7px 9px;
   font-family: $font-main;
   gap: 8px;
+  justify-content: space-between;
+  margin: 5px 20px;
+  border-radius: 5px;
 }
 
 .expense-t {
