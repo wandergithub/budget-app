@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :group, only: [:index, :new, :create, :destroy] do
-    resources :expense, only: [:index, :new, :create, :destroy, :update]
+    resources :expense, only: [:index, :new, :create, :destroy, :update, :edit]
   end
   resources :home, only: [:index]
   
