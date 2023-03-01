@@ -31,6 +31,20 @@ class GroupController < ApplicationController
     end
   end
 
+  def update
+    group = Group.find(params(params[:id]))
+    group.updata(group_params)
+
+    redirect_to group_index_path
+  end
+
+  def edit
+    group = Group.find(params[:id])
+    @current_name = group.name
+
+    redirect_to group_index_path
+  end
+
   def destroy
     group = Group.find(params[:id])
     group.destroy
