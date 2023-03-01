@@ -27,6 +27,12 @@ class ExpenseController < ApplicationController
     redirect_to group_expense_index_path(group.first.id)
   end
 
+  def destroy
+    expense = Expense.find(params[:id])
+    expense.destroy
+    redirect_to group_expense_index_path(params[:group_id])
+  end
+
   private
 
   def expense_params
