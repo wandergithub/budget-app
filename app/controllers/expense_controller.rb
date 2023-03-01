@@ -42,6 +42,9 @@ class ExpenseController < ApplicationController
   def edit
     @current_group = Group.find(params[:group_id])
     @groups = Group.all.where(user: current_user).map(&:name)
+    expense = Expense.find(params[:id])
+    @current_name = expense.name
+    @current_amount = expense.amount
   end
 
   private
