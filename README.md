@@ -61,10 +61,10 @@ After you're finished please remove all the comments and instructions!
 
 > Budget App: A mobile/web application where you can manage your budget. Users have a list of transactions associated with a category so that they can see how much money they spent on each item.
 
-<img src="app_screenshot.png">
-<img src="app_screenshot2.png">
-<img src="app_screenshot3.png">
-<img src="app_screenshot4.png">
+<img src="app_screenshot.jpeg">
+<img src="app_screenshot2.jpeg">
+<img src="app_screenshot3.jpeg">
+<img src="app_screenshot4.jpeg">
 
 ## 🛠 Built With <a name="built-with"></a>
 
