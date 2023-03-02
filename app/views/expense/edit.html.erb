@@ -1,0 +1,14 @@
+<%= render partial: "shared/nav_bar", locals: {title: "New transaction", title_amount: nil, back_button_path: group_expense_index_path(params[:group_id])} %>
+<%= form_with class: "groups-c form-s", url: "/group/#{params[:group_id]}/expense/#{params[:id]}", method: :patch, scope: :expense do |form| %>
+  <div class="field">
+    <%= form.text_field :name, autocomplete: "name", placeholder: "Expense name", value: @current_name %>
+  </div>
+  <div class="field">
+    <%= form.number_field :amount, autocomplete: "icon", placeholder: "Amount Expended", value: @current_amount %>
+  </div>
+  <div class="field">
+    <%= form.label :group, "Expense group:" %>
+    <%= form.select :group, [*@groups], selected: "#{@current_group.name}" %>
+  </div>
+  <%= form.submit "Update", class: 'new-btn', style: 'align-self: center;' %>
+<% end %>

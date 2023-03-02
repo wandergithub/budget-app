@@ -1,19 +1,5 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-@import url("https://fonts.cdnfonts.com/css/proxima-nova-2");
+
+@import "variables";
 
 /* splash screen */
 body {
@@ -75,10 +61,11 @@ body {
   display: flex;
   padding: 0 8px;
   align-items: center;
-  text-decoration: none;
   background: white;
-  margin: 7px 9px;
+  margin: 5px 20px;
+  border-radius: 5px;
   font-family: "Proxima Nova", sans-serif;
+  justify-content: space-between;
 }
 
 .group-container > img {
@@ -86,7 +73,6 @@ body {
 }
 
 .group-container > p {
-  margin-right: auto;
   color: darkgrey;
   margin-left: 3%;
   font-size: 20px;
@@ -99,9 +85,9 @@ body {
 }
 
 .main-btn {
-  background-color: #3778c2;
+  background-color: $color-1;
   border: none;
-  color: white;
+  color: $btn-c;
   border-radius: 2px;
   padding: 15px 32px;
   text-align: center;
@@ -136,9 +122,10 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  width: 80%;
+  width: 50%;
   font-family: "Proxima Nova", sans-serif;
   font-weight: lighter;
+  margin: 20px 20px;
 }
 
 .with-a {
@@ -148,8 +135,7 @@ body {
 }
 
 .groups-c {
-  background: #f1f3f2;
-  height: 100vh;
+  background: #f3f3f3;
   display: flex;
   flex-direction: column;
 }
@@ -157,6 +143,7 @@ body {
 .form-s {
   gap: 28px;
   padding-top: 21px;
+  flex-wrap: wrap;
 }
 
 .expense-c {
@@ -165,9 +152,11 @@ body {
   align-items: center;
   text-decoration: none;
   background: white;
-  margin: 7px 9px;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: $font-main;
   gap: 8px;
+  justify-content: space-between;
+  margin: 5px 20px;
+  border-radius: 5px;
 }
 
 .expense-t {

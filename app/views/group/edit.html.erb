@@ -1,7 +1,7 @@
 <%= render partial: "shared/nav_bar", locals: {title: "Create new group", title_amount: nil, back_button_path: group_index_path} %>
-<%= form_with class: "groups-c form-s", model: @group, url: "/group", method: :post, scope: :group do |form| %>
+<%= form_with class: "groups-c form-s", url: group_url(params[:id]), method: :patch, scope: :group do |form| %>
   <div class="field">
-    <%= form.text_field :name, autocomplete: "name", placeholder: "Group name" %>
+    <%= form.text_field :name, autocomplete: "name", placeholder: "Group name", value: @current_name %>
   </div>
   <div class="field">
     <p>Upload your group photo or skip to use default:</p>

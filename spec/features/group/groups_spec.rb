@@ -5,6 +5,10 @@ RSpec.describe 'Group pages integration examples', type: :feature do
   let(:user) { User.create(name: 'example 1', password: 'pasword11212', email: 'email@exmaple.com') }
 
   before(:each) do
+    # creates Groups
+    (0..5).each do |indx|
+      Group.create(name: "group #{indx}", user:)
+    end
     # Log in
     visit new_user_session_path
     fill_in 'user_email', with: user.email
@@ -18,10 +22,6 @@ RSpec.describe 'Group pages integration examples', type: :feature do
     end
 
     it 'presents each group/categorie name' do
-      # creates Groups
-      (0..5).each do |indx|
-        Group.create(name: "group #{indx}", user:)
-      end
       visit group_index_path
       Group.all.each do |group|
         expect(page).to have_content(group.name)
@@ -29,12 +29,17 @@ RSpec.describe 'Group pages integration examples', type: :feature do
     end
 
     it 'presents each group/categorie icon' do
-      # creates Groups
-      (0..5).each do |indx|
-        Group.create(name: "group #{indx}", user:)
-      end
       visit group_index_path
       expect(page).to have_css('img', count: Group.all.count)
+    end
+
+    it 'Presents total expenses number' do
+      total_expenses = 0
+      Group.all.each do |group|
+        total_expenses += group.total_expenses
+      end
+
+      expect(page).to have_content(/#{total_expenses}/)
     end
 
     it 'redirect to group#new form when add a new group button is clicked' do
@@ -52,13 +57,12 @@ RSpec.describe 'Group pages integration examples', type: :feature do
     end
 
     it 'creates a new group' do
-      expect(Group.first).to be_nil
+      expect(Group.last.name).to_not be == 'sample name'
 
       fill_in 'group_name', with: 'sample name'
-      fill_in 'group_icon', with: 'icon_link.png'
       click_on 'Save'
 
-      expect(Group.first).to be_an_instance_of(Group)
+      expect(Group.last.name).to be == 'sample name'
     end
   end
 end
