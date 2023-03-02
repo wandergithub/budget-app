@@ -59,7 +59,15 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Budget App <a name="about-project"></a>
 
-> Budget App: A mobile/web application where you can manage your budget. Users have a list of transactions associated with a category so that they can see how much money they spent on each item.
+Introducing the Budget App - a mobile and web-based application that simplifies budget management. With this app, users can easily track their income and expenses, edit or delete each expense or category, and view a list of transactions categorized by type.
+
+The Budget App provides an intuitive interface that makes it easy for users to manage their finances on the go. Users can view their total income and expenses in real-time, giving them an accurate picture of their financial health at a glance.
+
+One of the standout features of the Budget App is the ability to categorize transactions. Users can assign each transaction to a specific category, such as groceries, entertainment, or rent. This allows users to see how much money they are spending on each category and make adjustments as needed.
+
+Editing or deleting expenses and categories is also a breeze with the Budget App. Users can easily make changes to any transaction or category with just a few taps or clicks.
+
+Whether you're on a tight budget or just looking to keep track of your spending, the Budget App is the perfect tool for managing your finances. With its user-friendly interface, intuitive features, and powerful tracking capabilities, it's the ultimate budget management solution for anyone who wants to stay on top of their money.
 
 <img src="app_screenshot.jpeg">
 <img src="app_screenshot2.jpeg">
