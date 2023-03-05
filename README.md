@@ -83,6 +83,8 @@ Whether you're on a tight budget or just looking to keep track of your spending,
 - Capybara
 - PostgreSQL
 - Devise
+- JavaScript
+- SCSS/SASS
 
 <details>
   <summary>Client</summary>
