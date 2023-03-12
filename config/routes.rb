@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   resources :home, only: [:index]
   
   post '/set_income', to: 'group#set_income'
-
+  get '/render_sleeping', to: 'home#render_sleeping'
 end
