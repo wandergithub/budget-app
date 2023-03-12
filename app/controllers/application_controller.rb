@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  layout 'loading', only: [:render_sleeping]
+  
   include Devise::Controllers::Helpers
 
   protect_from_forgery with: :exception
