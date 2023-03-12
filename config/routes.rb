@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # Render loading page config
+  get '/healthcheck', to: proc { [200, {}, ['']] }
   devise_for :users, controllers: { registrations: "registrations" }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
@@ -11,4 +13,5 @@ Rails.application.routes.draw do
   
   post '/set_income', to: 'group#set_income'
   get '/render_sleeping', to: 'home#render_sleeping'
+
 end
