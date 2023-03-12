@@ -69,10 +69,10 @@ Editing or deleting expenses and categories is also a breeze with the Budget App
 
 Whether you're on a tight budget or just looking to keep track of your spending, the Budget App is the perfect tool for managing your finances. With its user-friendly interface, intuitive features, and powerful tracking capabilities, it's the ultimate budget management solution for anyone who wants to stay on top of their money.
 
-<img src="app_screenshot.jpeg">
-<img src="app_screenshot2.jpeg">
-<img src="app_screenshot3.jpeg">
-<img src="app_screenshot4.jpeg">
+<img src="app_screenshot.webp">
+<img src="app_screenshot2.webp">
+<img src="app_screenshot3.webp">
+<img src="app_screenshot4.webp">
 
 ## 🛠 Built With <a name="built-with"></a>
 
