@@ -32,6 +32,6 @@ class ApplicationController < ActionController::Base
   end
 
   def render_loading_page
-    render file: Rails.public_path.join('loading.html'), layout: false, status: :service_unavailable
+    render html: "", layout: "loading"
   end
 end
