@@ -23,7 +23,12 @@ class ApplicationController < ActionController::Base
   private
 
   def sleep_time_exceeded?
-    (Time.now - File.mtime('/tmp/app-initialized')).to_i > 30
+    # Initialize `app_initialized_time` when the application starts up
+    @app_initialized_time ||= Time.now
+
+    # Check if the current time is more than 60 seconds (or any desired time limit) after
+    # the application was initialized
+    Time.now > (@app_initialized_time + 60)
   end
 
   def render_loading_page
